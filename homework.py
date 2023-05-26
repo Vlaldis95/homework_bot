@@ -54,9 +54,9 @@ def get_api_answer(timestamp):
             raise StatusError('код запроса к API не равен 200!')
         return response.json()
     except requests.exceptions.RequestException:
-        print('Сбой запроса к API')
+        raise ConnectionError('Сбой запроса к API')
     except json.decoder.JSONDecodeError:
-        print('ошибка преобразования в JSON')
+        raise json.decoder.JSONDecodeError('ошибка преобразования в JSON')
 
 
 def check_response(response):
@@ -88,8 +88,6 @@ def parse_status(homework):
 
 def main():
     """Основная логика работы бота."""
-    logging.basicConfig(
-        level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(message)s')
     if not check_tokens():
         logging.critical('Отсутствует переменная окружения')
         sys.exit(0)
@@ -113,4 +111,6 @@ def main():
 
 
 if __name__ == '__main__':
+    logging.basicConfig(
+        level=logging.DEBUG, format='%(asctime)s [%(levelname)s] %(message)s')
     main()
