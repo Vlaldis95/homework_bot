@@ -49,14 +49,16 @@ source venv/Scripts/activate
 ```python3
 pip install -r requirements.txt
 ```
-В консоле импортируем токены для ЯндексюПрактикум и для Телеграмм:
-
+#### В консоли импортируем токены для Яндекс Практикум и для Телеграмм:
+```python3
 export PRACTICUM_TOKEN=<PRACTICUM_TOKEN>
 export TELEGRAM_TOKEN=<TELEGRAM_TOKEN>
 export CHAT_ID=<CHAT_ID>
-Запускаем бота
-
+```
+#### Запускаем бота
+```python3
 python homework.py
+```
 Бот будет работать, и каждые 10 минут проверять статус вашей домашней работы.
 
 Автор: Лукьяненко Владислав 
