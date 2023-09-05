@@ -24,7 +24,9 @@
 
 * Клонируем проект:
 
-' git clone https://github.com/themasterid/homework_bot.git
+'''bash
+git clone https://github.com/themasterid/homework_bot.git
+'''
 
 или
 
