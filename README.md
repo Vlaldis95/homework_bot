@@ -22,31 +22,33 @@
 
 ### Запуск на ПК
 
-* Клонируем проект:
+#### Клонируем проект:
 
-'''bash
+```bash
 git clone https://github.com/themasterid/homework_bot.git
-'''
+```
 
 или
-
-' git clone git@github.com:themasterid/homework_bot.git
-
-* Переходим в папку с ботом.
-
+```bash
+git clone git@github.com:themasterid/homework_bot.git
+```
+#### Переходим в папку с ботом.
+```bash
 cd homework_bot
-Устанавливаем виртуальное окружение
-
+```
+#### Устанавливаем виртуальное окружение
+```bash
 python -m venv venv
-Активируем виртуальное окружение
-
+```
+#### Активируем виртуальное окружение
+ ```bash 
 source venv/Scripts/activate
-Для деактивации виртуального окружения выполянем (после работы)
+```
 
-deactivate
-Устанавливаем зависимости
-
+#### Устанавливаем зависимости
+```python3
 pip install -r requirements.txt
+```
 В консоле импортируем токены для ЯндексюПрактикум и для Телеграмм:
 
 export PRACTICUM_TOKEN=<PRACTICUM_TOKEN>
